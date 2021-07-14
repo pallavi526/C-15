@@ -45,8 +45,8 @@ function setup() {
   invisibleGround.visible = false;
   
   //create Obstacle and Cloud Groups
-  obstaclesGroup = createGroup();
-  cloudsGroup = createGroup();
+//  obstaclesGroup = createGroup();
+  //cloudsGroup = createGroup();
   
   console.log("Hello" + 5);
   
@@ -84,17 +84,7 @@ function draw() {
     //spawn obstacles on the ground
     spawnObstacles();
     
-    if(obstaclesGroup.isTouching(trex)){
-        gameState = END;
-    }
-  }
-   else if (gameState === END) {
-      ground.velocityX = 0;
-     
-     obstaclesGroup.setVelocityXEach(0);
-     cloudsGroup.setVelocityXEach(0);
-   }
-  
+   
  
   //stop trex from falling down
   trex.collide(invisibleGround);
@@ -132,7 +122,7 @@ function spawnObstacles(){
     obstacle.lifetime = 300;
    
    //add each obstacle to the group
-    obstaclesGroup.add(obstacle);
+ //   obstaclesGroup.add(obstacle);
  }
 }
 
