@@ -92,7 +92,7 @@ function draw() {
   
   
   drawSprites();
-}
+}}
 
 function spawnObstacles(){
  if (frameCount % 60 === 0){
